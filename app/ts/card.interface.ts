@@ -1,4 +1,4 @@
-export interface cardInterface{
+export interface CardInterface {
     cardName: string;
     cardPID: number;
     pdpLink: string;

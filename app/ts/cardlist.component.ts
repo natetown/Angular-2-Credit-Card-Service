@@ -1,28 +1,27 @@
 /**
  * Created by nw53497 on 3/7/2017.
  */
-"use strict";
-import {Component} from "angular2/core";
-import {cardService} from "./card.service";
-import {OnInit} from "angular2/core";
+import {Component} from '@angular/core';
+import {CardService} from './card.service';
+import {OnInit} from '@angular/core';
 
 @Component({
-    selector: 'cardlist',
-    templateUrl: 'cardlist.component.html',
-    providers: [cardService]
+    selector: 'app-card-list',
+    templateUrl: './cardlist.component.html',
+    providers: [CardService]
 })
 
-export class CardListComponent implements OnInit{
+export class CardListComponent implements OnInit {
     public cards: any;
 
-    constructor(private cardService: cardService){}
+    constructor(private cardService: CardService) {}
 
-    getCards(){
+    getCards() {
        this.cards = this.cardService.getCards();
 
     }
 
-    ngOnInit():any {
+    ngOnInit(): any {
     this.getCards();
     }
 }
